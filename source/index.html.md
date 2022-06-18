@@ -1,11 +1,11 @@
 ---
-title: API Reference
+title: Chaturbate API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
+  # - ruby
+  # - python
+  # - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -20,12 +20,12 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the Chaturbate API
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Chaturbate API! You can use our API to access Chaturbate API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -38,7 +38,7 @@ This example API documentation page was created with [Slate](https://github.com/
 ```ruby
 require 'kittn'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Chaturbate::APIClient.authorize!('meowmeowmeow')
 ```
 
 ```python
@@ -47,7 +47,7 @@ import kittn
 api = kittn.authorize('meowmeowmeow')
 ```
 
-```shell
+```curl
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here" \
   -H "Authorization: meowmeowmeow"
@@ -61,9 +61,9 @@ let api = kittn.authorize('meowmeowmeow');
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Chaturbate uses API keys to allow access to the API. You can register a new Chaturbate API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Chaturbate expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 
@@ -78,7 +78,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 ```ruby
 require 'kittn'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Chaturbate::APIClient.authorize!('meowmeowmeow')
 api.kittens.get
 ```
 
@@ -89,7 +89,7 @@ api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
 ```
 
-```shell
+```curl
 curl "http://example.com/api/kittens" \
   -H "Authorization: meowmeowmeow"
 ```
@@ -144,7 +144,7 @@ Remember — a happy kitten is an authenticated kitten!
 ```ruby
 require 'kittn'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Chaturbate::APIClient.authorize!('meowmeowmeow')
 api.kittens.get(2)
 ```
 
@@ -155,7 +155,7 @@ api = kittn.authorize('meowmeowmeow')
 api.kittens.get(2)
 ```
 
-```shell
+```curl
 curl "http://example.com/api/kittens/2" \
   -H "Authorization: meowmeowmeow"
 ```
@@ -198,7 +198,7 @@ ID | The ID of the kitten to retrieve
 ```ruby
 require 'kittn'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Chaturbate::APIClient.authorize!('meowmeowmeow')
 api.kittens.delete(2)
 ```
 
@@ -209,7 +209,7 @@ api = kittn.authorize('meowmeowmeow')
 api.kittens.delete(2)
 ```
 
-```shell
+```curl
 curl "http://example.com/api/kittens/2" \
   -X DELETE \
   -H "Authorization: meowmeowmeow"
